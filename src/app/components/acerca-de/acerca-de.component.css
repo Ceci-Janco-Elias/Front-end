@@ -1,0 +1,20 @@
+.fotoPerfil{
+    width: 15rem;
+    margin: 1rem;
+}
+
+.tarjeta{
+    display: flex;
+    align-items: center;
+}
+
+.acercaDeMi{
+    margin: 2rem;
+    text-align: justify
+}
+
+@media (max-width: 425px) {
+    .tarjeta{
+        flex-direction: column;
+    }   
+}

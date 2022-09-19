@@ -1,0 +1,25 @@
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    button{
+        margin: 0 1rem;
+    }
+}
+
+.redes {
+    height: 2rem;
+}
+
+.redes:hover {
+    
+    border: 1px solid pink;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+.logoAP {
+    height: 3rem;
+}
