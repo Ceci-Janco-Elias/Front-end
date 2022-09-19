@@ -1,0 +1,12 @@
+.hardSkills{
+    padding: 6rem 3rem 3rem 3rem;
+}
+
+.item{
+    padding: 2rem 2rem 0;
+}
+
+.botonesEditarEliminar{
+    display: flex;
+    justify-content: center;
+}

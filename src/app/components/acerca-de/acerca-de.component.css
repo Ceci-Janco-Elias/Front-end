@@ -1,3 +1,7 @@
+.acercaDeMi{
+    padding: 4rem 4rem 0;
+}
+
 .fotoPerfil{
     width: 15rem;
     margin: 1rem;
@@ -8,7 +12,7 @@
     align-items: center;
 }
 
-.acercaDeMi{
+.acercaDeMi-descripcion{
     margin: 2rem;
     text-align: justify
 }
