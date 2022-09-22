@@ -21,12 +21,12 @@
     position: relative;
     width: 305px;
     height: 195px;
-    background-color: rgb(214, 245, 234);
+    background-color: #edaac0;
     margin: 30px 10px;
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 15px 20px #30c4c9;
+    box-shadow: 0 15px 20px #fc91b5;
     transition: 0.3s ease-in-out;
     border-radius: 15px;
 }

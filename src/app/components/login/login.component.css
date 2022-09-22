@@ -1,0 +1,72 @@
+.login{
+    background-image: url(../../../assets/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.blur{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 2px;   
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(243, 243, 243, 0.4);
+}
+
+button{
+    margin: 0 5px;
+}
+
+.formulario{
+    padding: 2rem 0;
+}
+
+.campo{
+    padding-top: 20px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.imput{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #fff;
+    padding: 8px 3px;
+    background: transparent;
+    transition: all .3s;
+    display: block;
+    width: 100%;
+    color: #fc91b5;
+    font-size: 2rem;
+}
+
+.label{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    color: gray;
+    padding: 8px 3px;
+    transition: all .3s;
+}
+
+.imput:focus ~ .label, .imput:valid ~ .label{
+    top: 0;
+    font-size: .8rem;
+}
+
+.imput:focus ~ .label{
+    color: #000000;
+}
+
+.imput:focus{
+    border-bottom: 5px solid #e5b0aa;
+}
+
+@media (min-width: 768px){
+    .row-fluid{
+        display: flex;
+        justify-content: center;
+    } 
+}

@@ -26,7 +26,9 @@
       </ul>
       </div>
       <form class="d-flex">
-        <button class="btn btn-outline-light" type="submit">Iniciar Sesión</button>
+        <button class="btn btn-outline-light" type="button" (click)="login()" *ngIf="!isLogged">Iniciar Sesión</button>
+        <button class="btn btn-outline-light" type="button" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+
       </form>
     </div>
   </div>
