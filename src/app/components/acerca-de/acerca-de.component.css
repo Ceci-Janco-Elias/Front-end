@@ -1,10 +1,5 @@
 .acercaDeMi{
-    padding: 4rem 4rem 0;
-}
-
-.fotoPerfil{
-    width: 15rem;
-    margin: 1rem;
+    padding: 2rem 2rem 0;
 }
 
 .tarjeta{
@@ -12,13 +7,33 @@
     align-items: center;
 }
 
-.acercaDeMi-descripcion{
-    margin: 2rem;
-    text-align: justify
+.fotoPerfil{
+    width: 15rem;
+    margin: 1rem;
+}
+
+.nombreYtitulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descripcion{
+    padding: 2rem 1rem;
+}
+
+p{
+    text-align: justify;
 }
 
 @media (max-width: 425px) {
     .tarjeta{
         flex-direction: column;
     }   
+}
+
+@media (max-width: 425px) {
+    .acercaDeMi{
+        padding: 1rem;
+    }
 }
