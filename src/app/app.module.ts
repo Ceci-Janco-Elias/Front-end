@@ -16,6 +16,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditarComponent } from './components/acerca-de/editar/editar.component';
 
 
 
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProyectoComponent,
     FooterComponent,
     InicioComponent,
-    LoginComponent
+    LoginComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

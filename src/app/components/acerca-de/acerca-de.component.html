@@ -1,55 +1,22 @@
 <div class="container acercaDeMi">
-    <div class="row">
+    <div class="row" *ngFor="let persona of Persona">
         <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 col-xxl tarjeta d-flex justify-content-center">
+            <!-- <img src="{{persona.imagen}}" alt="Foto de Perfil img-fluid"
+                class="fotoPerfil"> -->
             <img src="https://cdn-icons-png.flaticon.com/512/2335/2335114.png" alt="Foto de Perfil img-fluid"
                 class="fotoPerfil">
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 col-xxl nombreYtitulo">
-            <h1 class="d-flex justify-content-center">Cecilia Janco Elias</h1>
+            <h1 class="d-flex justify-content-center">{{persona.nombre}} {{persona.apellido}}</h1>
             <!-- <h1 class="d-flex justify-content-center">Janco Elias</h1> -->
-            <h5 class="d-flex justify-content-center">Developer Full Stack Jr</h5>
+            <h5 class="d-flex justify-content-center">{{persona.titulo}}</h5>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-6 col-xxl descripcion">
             <h3>Acerca de mi</h3>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi autem minus,      doloribus amet sequi debitis repellendus dolorum et animi blanditiis exercitationem obcaecati voluptates tenetur veniam id repudiandae suscipit quia tempore?
+                {{persona.descripcion}}
             </p>
-            <button type="button" class="btn btn-success">Modificar</button>
+            <button type="button" class="btn btn-success" routerLink="editar/{{persona.id}}" *ngIf="isLogged">Modificar</button>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-<!-- <div class="container-fluid acercaDeMi">
-    <div class="row-fluid acercaDeMi-row">
-        <div class="col col-md-4 tarjeta">
-            <div class="d-flex justify-content-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2335/2335114.png" class="fotoPerfil"
-                    alt="Foto de Perfil">
-            </div>
-            <div>
-                <h1 class="d-flex justify-content-center">Cecilia</h1>
-                <h1 class="d-flex justify-content-center">Janco Elias</h1>
-                <h5 class="d-flex justify-content-center">Developer Full Stack Jr</h5>
-            </div>
-        </div>
-
-        <div class="col col-md-8 acercaDeMi-descripcion">
-            <h3>Acerca de mi</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi autem minus, doloribus amet sequi debitis
-                repellendus dolorum et animi blanditiis exercitationem obcaecati voluptates tenetur veniam id
-                repudiandae
-                suscipit quia tempore?</p>
-                   <button type="button" class="btn btn-success">Modificar</button>
-                </div><div>
-                 
-        </div>
-    </div>
-</div> -->

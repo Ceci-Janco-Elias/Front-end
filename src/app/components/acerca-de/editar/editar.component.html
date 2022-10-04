@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="formulario">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="nombre">
+                            <h3>Nombre</h3>
+                        </label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                            [(ngModel)]="pers.nombre" required>
+                    </div>
+                    <div class="form-group col">
+                        <label for="apellido">
+                            <h3>Apellido</h3>
+                        </label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
+                            [(ngModel)]="pers.apellido" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="titulo">
+                            <h3>Título</h3>
+                        </label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título" rows="7"
+                            [(ngModel)]="pers.titulo" required>
+                    </div>
+                    <div class="form-group col">
+                        <label for="imagen">
+                            <h3>Imagen de perfil</h3>
+                        </label>
+                        <input type="url" class="form-control" id="imagen" name="URL de imagen"
+                            placeholder="URL de imagen" rows="7" [(ngModel)]="pers.imagen" required>
+                    </div>
+                </div>
+
+                <div class="form-group col">
+                    <label for="descripcion">
+                        <h3>Descripción</h3>
+                    </label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción"
+                        rows="7" [(ngModel)]="pers.descripcion" required></textarea>
+                </div>
+
+                <div class="botonera">
+                    <button type="submit" class="btn btn-warning">
+                        Actualizar
+                    </button>
+                    <button type="button" class="btn btn-danger" routerLink="">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

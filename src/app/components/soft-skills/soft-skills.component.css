@@ -1,4 +1,4 @@
-.hardSkills{
+.softSkills{
     padding: 1rem;
 }
 
@@ -16,7 +16,7 @@
 }
 
 @media (min-width: 1025px) {
-    .hardSkills{
+    .softSkills{
         padding: 6rem 6rem 0;
     } 
 }
