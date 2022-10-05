@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditarComponent } from './components/acerca-de/editar/editar.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia/nueva-experiencia.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/nueva-educacion.component';
 
 
 
@@ -40,7 +42,9 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     LoginComponent,
     EditarComponent,
     NuevaExperienciaComponent,
-    EditarExperienciaComponent
+    EditarExperienciaComponent,
+    EditarEducacionComponent,
+    NuevaEducacionComponent
   ],
   imports: [
     BrowserModule,

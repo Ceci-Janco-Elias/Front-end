@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="formulario">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="row">
+                    <div class="form-group col-12 col-lg-4">
+                        <label for="nombreEdu">
+                            <h3>Nombre</h3>
+                        </label>
+                        <input type="text" class="form-control" id="nombreEdu" name="nombreEdu"
+                            placeholder="Nombre de la educación" [(ngModel)]="nombreEdu" required>
+                    </div>
+                    <div class="form-group col-12 col-md-6 col-lg-4">
+                        <label for="imagenEdu">
+                            <h3>Imagen</h3>
+                        </label>
+                        <input type="text" class="form-control" id="imagenEdu" name="imagenEdu"
+                            placeholder="URL de imagen de la educación" [(ngModel)]="imagenEdu" required>
+                    </div>
+                    <div class="form-group col-12 col-md-6 col-lg-4">
+                        <label for="fechaEdu">
+                            <h3>Fecha</h3>
+                        </label>
+                        <input type="text" class="form-control" id="fechaEdu" name="fechaEdu" placeholder="Fecha" [(ngModel)]="fechaEdu"
+                            required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descripcionEdu">
+                        <h3>Descripción</h3>
+                    </label>
+                    <textarea class="form-control" id="descripcionEdu" name="descripcionEdu" placeholder="Descripción"
+                        rows="7" [(ngModel)]="descripcionEdu" required></textarea>
+                </div>
+                <div class="botonera">
+                    <button type="submit" class="btn btn-warning">
+                        Agregar Educación
+                    </button>
+                    <button type="button" class="btn btn-danger" routerLink="">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

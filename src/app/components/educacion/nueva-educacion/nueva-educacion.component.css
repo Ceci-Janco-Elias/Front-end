@@ -1,0 +1,30 @@
+.container-fluid{
+    width:100vw;
+    height:100vh;
+    background-image: url(../../../../assets/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.formulario {
+    padding: 5rem;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+
+button {
+    margin: 2px;
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        padding: 15px;
+    }
+
+    .botonera {
+        padding: 1rem 0;
+    }
+}
