@@ -17,6 +17,8 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditarComponent } from './components/acerca-de/editar/editar.component';
+import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 
 
 
@@ -36,7 +38,9 @@ import { EditarComponent } from './components/acerca-de/editar/editar.component'
     FooterComponent,
     InicioComponent,
     LoginComponent,
-    EditarComponent
+    EditarComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule,

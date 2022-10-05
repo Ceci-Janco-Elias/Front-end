@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./editar.component.css']
 })
 export class EditarComponent implements OnInit {
-  pers : persona = null!;
+  pers : persona = null;
 
   constructor(private personaS: PersonaService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
@@ -30,7 +30,7 @@ export class EditarComponent implements OnInit {
       this.router.navigate(['']);
     }, err =>{
       alert('Error al modificar persona');
-      this.router.navigate(['']);
+      
     })
   }
 

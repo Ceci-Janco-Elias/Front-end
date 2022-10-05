@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="formulario">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="row">
+                    <div class="form-group col-12 col-lg-4">
+                        <label for="nombreExp">
+                            <h3>Nombre</h3>
+                        </label>
+                        <input type="text" class="form-control" id="nombreExp" name="nombreExp"
+                            placeholder="Nombre de la empresa" [(ngModel)]="nombreExp" required>
+                    </div>
+                    <div class="form-group col-12 col-md-6 col-lg-4">
+                        <label for="imagenExp">
+                            <h3>Imagen</h3>
+                        </label>
+                        <input type="text" class="form-control" id="imagenExp" name="imagenExp"
+                            placeholder="URL de imagen de empresa" [(ngModel)]="imagenExp" required>
+                    </div>
+                    <div class="form-group col-12 col-md-6 col-lg-4">
+                        <label for="fechaExp">
+                            <h3>Fecha</h3>
+                        </label>
+                        <input type="text" class="form-control" id="fechaExp" name="fechaExp" placeholder="Fecha" [(ngModel)]="fechaExp"
+                            required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descripcionExp">
+                        <h3>Descripción</h3>
+                    </label>
+                    <textarea class="form-control" id="descripcionExp" name="descripcionExp" placeholder="Descripción"
+                        rows="7" [(ngModel)]="descripcionExp" required></textarea>
+                </div>
+                <div class="botonera">
+                    <button type="submit" class="btn btn-warning">
+                        Agregar Experiencia
+                    </button>
+                    <button type="button" class="btn btn-danger" routerLink="">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
