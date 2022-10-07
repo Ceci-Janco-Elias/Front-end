@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HardSkills } from 'src/app/modelos/HardSkills';
+import { HardSkills } from 'src/app/modelos/hardSkills';
 import { HardSkillsService } from 'src/app/service/hard-skills.service';
 import { TokenService } from 'src/app/service/token.service';
 

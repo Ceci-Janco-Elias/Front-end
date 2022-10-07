@@ -4,18 +4,18 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="row">
                     <div class="form-group col">
-                        <label for="nombreHS">
+                        <label for="nombreSS">
                             <h3>Nombre</h3>
                         </label>
-                        <input type="text" class="form-control" id="nombreHS" name="nombreHS"
-                            placeholder="Nombre de la habilidad" [(ngModel)]="hard.nombreHS" required>
+                        <input type="text" class="form-control" id="nombreSS" name="nombreSS"
+                            placeholder="Nombre de la habilidad" [(ngModel)]="soft.nombreSS" required>
                     </div>
                     
                     <div class="form-group col">
                         <label for="porcentaje">
                             <h3>Porcentaje</h3>
                         </label>
-                        <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="Porcentaje" min="10" max="100" [(ngModel)]="hard.porcentajeHS"
+                        <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="Porcentaje" min="10" max="100" [(ngModel)]="soft.porcentajeSS"
                             required>
                     </div>
                 </div>

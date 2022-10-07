@@ -23,6 +23,8 @@ import { EditarEducacionComponent } from './components/educacion/editar-educacio
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/nueva-educacion.component';
 import { NuevaHardSkillsComponent } from './components/hard-skills/nueva-hard-skills/nueva-hard-skills.component';
 import { EditarHardSkillsComponent } from './components/hard-skills/editar-hard-skills/editar-hard-skills.component';
+import { NuevaSoftSkillsComponent } from './components/soft-skills/nueva-soft-skills/nueva-soft-skills.component';
+import { EditarSoftSkillsComponent } from './components/soft-skills/editar-soft-skills/editar-soft-skills.component';
 
 
 
@@ -49,7 +51,9 @@ import { EditarHardSkillsComponent } from './components/hard-skills/editar-hard-
     EditarEducacionComponent,
     NuevaEducacionComponent,
     NuevaHardSkillsComponent,
-    EditarHardSkillsComponent
+    EditarHardSkillsComponent,
+    NuevaSoftSkillsComponent,
+    EditarSoftSkillsComponent
   ],
   imports: [
     BrowserModule,

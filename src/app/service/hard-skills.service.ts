@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HardSkills } from '../modelos/HardSkills';
+import { HardSkills } from '../modelos/hardSkills';
 
 @Injectable({
   providedIn: 'root'

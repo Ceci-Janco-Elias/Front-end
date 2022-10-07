@@ -1,28 +1,28 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="formulario">
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="row">
                     <div class="form-group col">
-                        <label for="nombreHS">
+                        <label for="nombreSS">
                             <h3>Nombre</h3>
                         </label>
-                        <input type="text" class="form-control" id="nombreHS" name="nombreHS"
-                            placeholder="Nombre de la habilidad" [(ngModel)]="hard.nombreHS" required>
+                        <input type="text" class="form-control" id="nombreSS" name="nombreSS"
+                            placeholder="Nombre de la habilidad" [(ngModel)]="nombreSS" required>
                     </div>
                     
                     <div class="form-group col">
                         <label for="porcentaje">
                             <h3>Porcentaje</h3>
                         </label>
-                        <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="Porcentaje" min="10" max="100" [(ngModel)]="hard.porcentajeHS"
+                        <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="Porcentaje" min="10" max="100" [(ngModel)]="porcentajeSS"
                             required>
                     </div>
                 </div>
                 
                 <div class="botonera">
                     <button type="submit" class="btn btn-warning">
-                        Actualizar
+                        Agregar Habilidad
                     </button>
                     <button type="button" class="btn btn-danger" routerLink="">
                         Cancelar

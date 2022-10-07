@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HardSkills } from 'src/app/modelos/HardSkills';
+import { HardSkills } from 'src/app/modelos/hardSkills';
 import { HardSkillsService } from 'src/app/service/hard-skills.service';
 
 @Component({
@@ -20,8 +20,8 @@ export class NuevaHardSkillsComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new HardSkills(this.nombreHS, this.porcentajeHS);
-    this.hardSkillsS.save(expe).subscribe(data => {
+    const hard = new HardSkills(this.nombreHS, this.porcentajeHS);
+    this.hardSkillsS.save(hard).subscribe(data => {
       alert("Habilidad añadida");
       this.router.navigate(['']);
     }, err => {

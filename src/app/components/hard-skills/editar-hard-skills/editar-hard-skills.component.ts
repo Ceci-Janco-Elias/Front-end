@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HardSkills } from 'src/app/modelos/HardSkills';
+import { HardSkills } from 'src/app/modelos/hardSkills';
 import { HardSkillsService } from 'src/app/service/hard-skills.service';
 
 @Component({
