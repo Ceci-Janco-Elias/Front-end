@@ -21,6 +21,9 @@ import { NuevaExperienciaComponent } from './components/experiencia/nueva-experi
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/nueva-educacion.component';
+import { NuevaHardSkillsComponent } from './components/hard-skills/nueva-hard-skills/nueva-hard-skills.component';
+import { EditarHardSkillsComponent } from './components/hard-skills/editar-hard-skills/editar-hard-skills.component';
+
 
 
 
@@ -44,13 +47,15 @@ import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/
     NuevaExperienciaComponent,
     EditarExperienciaComponent,
     EditarEducacionComponent,
-    NuevaEducacionComponent
+    NuevaEducacionComponent,
+    NuevaHardSkillsComponent,
+    EditarHardSkillsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
