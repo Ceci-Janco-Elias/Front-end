@@ -20,7 +20,7 @@
                 <p>{{Experiencia.descripcionExp}}</p>
             </div>
 
-            <div class="col col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 botonesEditarEliminar">
+            <div class="col col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 botonesEditarEliminar" *ngIf="isLogged">
                 <button class="btn btn-warning" routerLink="/editarexperiencia/{{Experiencia.id}}">
                     <i class="bi bi-pencil"></i>
                 </button>

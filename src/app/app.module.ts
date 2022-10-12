@@ -25,6 +25,8 @@ import { NuevaHardSkillsComponent } from './components/hard-skills/nueva-hard-sk
 import { EditarHardSkillsComponent } from './components/hard-skills/editar-hard-skills/editar-hard-skills.component';
 import { NuevaSoftSkillsComponent } from './components/soft-skills/nueva-soft-skills/nueva-soft-skills.component';
 import { EditarSoftSkillsComponent } from './components/soft-skills/editar-soft-skills/editar-soft-skills.component';
+import { EditarProyectoComponent } from './components/proyecto/editar-proyecto/editar-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto/nuevo-proyecto.component';
 
 
 
@@ -53,7 +55,9 @@ import { EditarSoftSkillsComponent } from './components/soft-skills/editar-soft-
     NuevaHardSkillsComponent,
     EditarHardSkillsComponent,
     NuevaSoftSkillsComponent,
-    EditarSoftSkillsComponent
+    EditarSoftSkillsComponent,
+    EditarProyectoComponent,
+    NuevoProyectoComponent
   ],
   imports: [
     BrowserModule,

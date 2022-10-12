@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="formulario">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombrePro">
+                        <h3>Nombre del proyecto</h3>
+                    </label>
+                    <input type="text" class="form-control" id="nombrePro" name="nombrePro"
+                        placeholder="Nombre del proyecto" [(ngModel)]="nombrePro" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionPro">
+                        <h3>Descripción</h3>
+                    </label>
+                    <textarea class="form-control" id="descripcionPro" name="descripcionPro" placeholder="Descripción"
+                        rows="7" [(ngModel)]="descripcionPro" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="urlPro">
+                        <h3>URL del proyecto</h3>
+                    </label>
+                    <input type="text" class="form-control" id="urlPro" name="urlPro"
+                        placeholder="URL del proyecto" [(ngModel)]="urlPro" required>
+                </div>
+                <div class="form-group">
+                    <label for="imgPro">
+                        <h3>Imagen del proyecto</h3>
+                    </label>
+                    <input type="text" class="form-control" id="imgPro" name="imgPro"
+                        placeholder="URL de Imagen del proyecto" [(ngModel)]="imgPro" required>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    Agregar Proyecto
+                </button>
+                <button type="button" class="btn btn-danger" routerLink="">
+                    Cancelar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
