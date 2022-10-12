@@ -11,7 +11,7 @@ import { SoftSkillsService } from 'src/app/service/soft-skills.service';
 export class NuevaSoftSkillsComponent implements OnInit {
 
   nombreSS: string = '';
-  porcentajeSS: string = '';
+  porcentajeSS: number = 0;
 
 
   constructor(private softSkillsS: SoftSkillsService, private router: Router) { }
@@ -19,14 +19,21 @@ export class NuevaSoftSkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   onCreate(): void {
     const soft = new SoftSkills(this.nombreSS, this.porcentajeSS);
-    this.softSkillsS.save(soft).subscribe(data => {
-      alert("Habilidad añadida");
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló creación de nueva habilidad");
-    })
+    if (this.nombreSS === "") {
+      alert("El nombre es necesario")
+    } else if (this.porcentajeSS < 0 || this.porcentajeSS > 100 || this.porcentajeSS === null) {
+      alert("El porcentaje de la habilidad debe ser entre 0 a 100. El valor " + this.porcentajeSS + " no es válido")
+    }
+    else {
+      this.softSkillsS.save(soft).subscribe(data => {
+        alert("Habilidad añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló creación de nueva habilidad");
+      })
+    }
   }
-
 }

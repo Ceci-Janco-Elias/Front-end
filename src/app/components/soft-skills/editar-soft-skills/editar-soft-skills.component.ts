@@ -25,12 +25,15 @@ export class EditarSoftSkillsComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.softSkillsS.update(id, this.soft).subscribe(data => {
-      alert("Habilidad actualizada")
-      this.router.navigate(['']);
-    }, err => {
-      alert('Error al modificar habilidad');
-    })
+    if (this.soft.porcentajeSS > 100 || this.soft.porcentajeSS < 0 || this.soft.porcentajeSS === null || this.soft.nombreSS === "") {
+      alert("Es necesario que la habilidad tenga NOMBRE y su VALOR sea entre 0 y 100")
+    } else {
+      this.softSkillsS.update(id, this.soft).subscribe(data => {
+        alert("Habilidad actualizada")
+        this.router.navigate(['']);
+      }, err => {
+        alert('Error al modificar habilidad');
+      })
+    }
   }
-
 }

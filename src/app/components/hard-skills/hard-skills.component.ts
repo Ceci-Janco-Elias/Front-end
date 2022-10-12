@@ -30,13 +30,18 @@ export class HardSkillsComponent implements OnInit {
   }
 
   delete(id?: number) {
-    if (id != undefined) {
-      this.hardSkillsS.delete(id).subscribe(data => {
-        alert("Habilidad eliminada")
-        this.cargarHardSkills();
-      }, err => {
-        alert("No se pudo borrar la habilidad");
-      })
+    var resultado = confirm('¿Estás seguro de borrar habilidad?');
+    if (resultado === true) {
+      if (id != undefined) {
+        this.hardSkillsS.delete(id).subscribe(data => {
+          alert("Habilidad eliminada")
+          this.cargarHardSkills();
+        }, err => {
+          alert("No se pudo borrar la habilidad");
+        })
+      }
+    } else {
+      alert('No se eliminara la habilidad');
     }
   }
 }

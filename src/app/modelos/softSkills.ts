@@ -1,9 +1,9 @@
 export class SoftSkills {
     id? : number;
     nombreSS : string;
-    porcentajeSS : string;
+    porcentajeSS : number;
 
-    constructor(nombreSS: string, porcentajeSS: string){
+    constructor(nombreSS: string, porcentajeSS: number){
         this.nombreSS = nombreSS;
         this.porcentajeSS = porcentajeSS;
     }

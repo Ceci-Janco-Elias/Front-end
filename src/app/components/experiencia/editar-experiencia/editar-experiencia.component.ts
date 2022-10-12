@@ -9,28 +9,31 @@ import { ExperienciaSService } from 'src/app/service/experiencia-s.service';
   styleUrls: ['./editar-experiencia.component.css']
 })
 export class EditarExperienciaComponent implements OnInit {
-  expLab : Experiencia = null;
+  expLab: Experiencia = null;
 
   constructor(private experienciaS: ExperienciaSService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experienciaS.detail(id).subscribe(data =>{
+    this.experienciaS.detail(id).subscribe(data => {
       this.expLab = data;
-    }, err =>{
+    }, err => {
       alert('Error al modificar experiencia');
       this.router.navigate(['']);
     })
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experienciaS.update(id, this.expLab).subscribe(data =>{
-      alert("Experiencia actualizada")
-      this.router.navigate(['']);
-    }, err =>{
-      alert('Error al modificar experiencia');
-      this.router.navigate(['']);
-    })
+    if (this.expLab.nombreExp === "" || this.expLab.descripcionExp === "" || this.expLab.fechaExp === "" || this.expLab.imagenExp === "") {
+      alert("Ningun campo debe estar vacio");
+    } else {
+      this.experienciaS.update(id, this.expLab).subscribe(data => {
+        alert("Experiencia laboral actualizada")
+        this.router.navigate(['']);
+      }, err => {
+        alert('Error al modificar experiencia laboral');
+      })
+    }
   }
 }

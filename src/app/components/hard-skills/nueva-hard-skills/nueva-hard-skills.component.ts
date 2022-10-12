@@ -11,7 +11,7 @@ import { HardSkillsService } from 'src/app/service/hard-skills.service';
 export class NuevaHardSkillsComponent implements OnInit {
 
   nombreHS: string = '';
-  porcentajeHS: string = '';
+  porcentajeHS: number = 0;
 
 
   constructor(private hardSkillsS: HardSkillsService, private router: Router) { }
@@ -20,12 +20,19 @@ export class NuevaHardSkillsComponent implements OnInit {
   }
 
   onCreate(): void {
-    const hard = new HardSkills(this.nombreHS, this.porcentajeHS);
-    this.hardSkillsS.save(hard).subscribe(data => {
-      alert("Habilidad añadida");
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló creación de nueva habilidad");
-    })
+    const soft = new HardSkills(this.nombreHS, this.porcentajeHS);
+    if (this.nombreHS === "") {
+      alert("El nombre es necesario")
+    } else if (this.porcentajeHS < 0 || this.porcentajeHS > 100 || this.porcentajeHS === null) {
+      alert("El porcentaje de la habilidad debe ser entre 0 a 100. El valor " + this.porcentajeHS + " no es válido")
+    }
+    else {
+      this.hardSkillsS.save(soft).subscribe(data => {
+        alert("Habilidad añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló creación de nueva habilidad");
+      })
+    }
   }
 }

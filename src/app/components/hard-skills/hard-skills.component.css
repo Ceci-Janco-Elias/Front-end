@@ -2,6 +2,18 @@
     padding: 1rem;
 }
 
+.titulo{
+    padding-bottom: 3rem;
+}
+
+.subtitulo{
+    margin-left: 3rem;
+}
+
+.btnNuevaS{
+    margin-left: 3rem;
+}
+
 .item{
     padding: 2rem 2rem 0;
 }

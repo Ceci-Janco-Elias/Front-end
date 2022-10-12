@@ -1,9 +1,9 @@
 export class HardSkills {
     id? : number;
     nombreHS : string;
-    porcentajeHS : string;
+    porcentajeHS : number;
 
-    constructor(nombreHS: string, porcentajeHS: string){
+    constructor(nombreHS: string, porcentajeHS: number){
         this.nombreHS = nombreHS;
         this.porcentajeHS = porcentajeHS;
     }

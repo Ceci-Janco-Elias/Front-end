@@ -30,14 +30,18 @@ export class ExperienciaComponent implements OnInit {
   }
 
   delete(id?: number) {
-    if (id != undefined) {
-      this.experienciaS.delete(id).subscribe(data => {
-        alert("Experiencia eliminada")
-        this.cargarExperiencia();
-      }, err => {
-        alert("No se pudo borrar la experiencia");
-      })
+    var resultado = confirm('¿Estás seguro de borrar la experiencia laboral?');
+    if (resultado === true) {
+      if (id != undefined) {
+        this.experienciaS.delete(id).subscribe(data => {
+          alert("Experiencia laboral eliminada")
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo borrar la experiencia laboral");
+        })
+      }
+    } else {
+      alert('No se eliminara la experiencia laboral');
     }
   }
-
 }

@@ -25,12 +25,16 @@ export class EditarHardSkillsComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.hardSkillsS.update(id, this.hard).subscribe(data => {
-      alert("Habilidad actualizada")
-      this.router.navigate(['']);
-    }, err => {
-      alert('Error al modificar habilidad');
-    })
+    if (this.hard.porcentajeHS > 100 || this.hard.porcentajeHS < 0 || this.hard.porcentajeHS === null || this.hard.nombreHS === "") {
+      alert("Es necesario que la habilidad tenga NOMBRE y su VALOR sea entre 0 y 100")
+    } else {
+      this.hardSkillsS.update(id, this.hard).subscribe(data => {
+        alert("Habilidad actualizada")
+        this.router.navigate(['']);
+      }, err => {
+        alert('Error al modificar habilidad');
+      })
+    }
   }
 }
 

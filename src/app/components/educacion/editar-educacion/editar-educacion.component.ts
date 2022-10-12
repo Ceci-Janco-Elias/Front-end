@@ -10,27 +10,31 @@ import { EducacionSService } from 'src/app/service/educacion-s.service';
 })
 export class EditarEducacionComponent implements OnInit {
 
-  educacion : Educacion = null;
+  educacion: Educacion = null;
 
   constructor(private educacionS: EducacionSService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.detail(id).subscribe(data =>{
+    this.educacionS.detail(id).subscribe(data => {
       this.educacion = data;
-    }, err =>{
+    }, err => {
       alert('Error al modificar educación');
       this.router.navigate(['']);
     })
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.update(id, this.educacion).subscribe(data =>{
-      alert("Educación actualizada")
-      this.router.navigate(['']);
-    }, err =>{
-      alert('Error al modificar educación');
-    })
+    if (this.educacion.nombreEdu === "" || this.educacion.descripcionEdu === "" || this.educacion.fechaEdu === "" || this.educacion.imagenEdu === "") {
+      alert("Ningun campo debe estar vacio");
+    } else {
+      this.educacionS.update(id, this.educacion).subscribe(data => {
+        alert("Educación actualizada")
+        this.router.navigate(['']);
+      }, err => {
+        alert('Error al modificar educación');
+      })
+    }
   }
 }

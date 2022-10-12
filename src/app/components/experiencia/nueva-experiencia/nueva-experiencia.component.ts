@@ -21,14 +21,23 @@ export class NuevaExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreExp, this.descripcionExp, this.fechaExp, this.imagenExp);
-    this.experienciaS.save(expe).subscribe(data => {
-      alert("Experiencia añadida");
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló");
-      this.router.navigate(['']);
-    })
-
+    const soft = new Experiencia(this.nombreExp, this.descripcionExp, this.fechaExp, this.imagenExp);
+    if (this.nombreExp === "") {
+      alert("El nombre es necesario")
+    } else if (this.descripcionExp === "") {
+      alert("Es necesario poner una descripción")
+    } else if (this.fechaExp === "") {
+      alert("Es necesario colocar fecha")
+    } else if (this.imagenExp === "") {
+      alert("Es necesario colocar una imagen para la experiencia laboral")
+    }
+    else {
+      this.experienciaS.save(soft).subscribe(data => {
+        alert("Experiencia laboral añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló creación de nueva experiencia laboral");
+      })
+    }
   }
 }

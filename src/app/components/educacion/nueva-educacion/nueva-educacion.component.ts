@@ -21,12 +21,23 @@ export class NuevaEducacionComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Educacion(this.nombreEdu, this.descripcionEdu, this.fechaEdu, this.imagenEdu);
-    this.educacionS.save(expe).subscribe(data => {
-      alert("Educación añadida");
-      this.router.navigate(['']);
-    }, err => {
-      alert("No se pudo agregar educación"); 
-    })
+    const soft = new Educacion(this.nombreEdu, this.descripcionEdu, this.fechaEdu, this.imagenEdu);
+    if (this.nombreEdu === "") {
+      alert("El nombre es necesario")
+    } else if (this.descripcionEdu === "") {
+      alert("Es necesario poner una descripción")
+    } else if (this.fechaEdu === "") {
+      alert("Es necesario colocar fecha")
+    } else if (this.imagenEdu === "") {
+      alert("Es necesario colocar una imagen para la educación")
+    }
+    else {
+      this.educacionS.save(soft).subscribe(data => {
+        alert("Educación añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló creación de nueva educación");
+      })
+    }
   }
 }

@@ -1,7 +1,7 @@
 <div class="softSkills">
-    <h1 class="titulo">Soft Skills</h1>
+    <h3 class="subtitulo">Soft Skills</h3>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-success" routerLink="/nuevass" *ngIf="isLogged">
+        <button type="button" class="btn btn-success btnNuevaS" routerLink="/nuevass" *ngIf="isLogged">
             Nueva Soft Skills
         </button>
     </div>
@@ -14,7 +14,7 @@
     
             <div class="progress d-flex align-items-center col-12 col-sm-12 col-md col-lg col-xl col-xxl">
 
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                <div class="progress-bar progress-bar-striped progress-bar-animated  bg-warning" role="progressbar"
                     aria-label="Animated striped example" [style.width]="SoftSkills?.porcentajeSS + '%'"
                     aria-valuemin="0" aria-valuemax="100">
                     {{ SoftSkills?.porcentajeSS }}
