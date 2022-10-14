@@ -9,7 +9,8 @@ import { NuevoUsuario } from '../modelos/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  // authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://backceci.herokuapp.com/';
 
   constructor(private httpClient: HttpClient) { }
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

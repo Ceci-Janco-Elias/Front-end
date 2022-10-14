@@ -8,7 +8,8 @@ import { HardSkills } from '../modelos/hardSkills';
 })
 export class HardSkillsService {
 
-  hardURL = 'http://localhost:8080/hardskills/';
+  // hardURL = 'http://localhost:8080/hardskills/';
+  hardURL = 'https://backceci.herokuapp.com/';
 
   constructor(private httpClient: HttpClient) { }
 

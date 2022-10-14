@@ -9,7 +9,8 @@ import { Educacion } from '../modelos/educacion';
 })
 export class EducacionSService {
 
-  educacionURL = 'http://localhost:8080/educacion/';
+  // educacionURL = 'http://localhost:8080/educacion/';
+  educacionURL = 'https://backceci.herokuapp.com/';
 
   constructor(private httpClient: HttpClient) { }
 

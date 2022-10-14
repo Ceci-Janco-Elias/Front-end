@@ -34,4 +34,8 @@ export class EditarComponent implements OnInit {
     })
   }
 
+  uploadImage($event:any){
+
+  }
+
 }
