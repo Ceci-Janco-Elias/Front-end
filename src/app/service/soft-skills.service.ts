@@ -9,7 +9,7 @@ import { SoftSkills } from '../modelos/softSkills';
 export class SoftSkillsService {
 
   // softURL = 'http://localhost:8080/softskills/';
-  softURL = 'https://backceci.herokuapp.com/';
+  softURL = 'https://backcje.herokuapp.com/softskills/';
 
   constructor(private httpClient: HttpClient) { }
 

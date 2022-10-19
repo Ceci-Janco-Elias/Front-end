@@ -27,6 +27,9 @@ import { NuevaSoftSkillsComponent } from './components/soft-skills/nueva-soft-sk
 import { EditarSoftSkillsComponent } from './components/soft-skills/editar-soft-skills/editar-soft-skills.component';
 import { EditarProyectoComponent } from './components/proyecto/editar-proyecto/editar-proyecto.component';
 import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto/nuevo-proyecto.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -64,6 +67,8 @@ import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto/nue
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]
